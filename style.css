@@ -1,0 +1,604 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  background: #000;
+  scroll-behavior: smooth;
+}
+
+.body {
+  position: relative;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 400;
+}
+
+#showLess {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  top: 40px;
+  left: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  mix-blend-mode: difference;
+  z-index: 2;
+}
+@media (max-width: 1000px) {
+  .menu {
+    display: none;
+  }
+}
+.menu-item {
+  color: #FFF;
+  text-decoration: unset;
+  cursor: pointer;
+}
+.menu-item:hover {
+  text-decoration: underline;
+}
+.menu-item.active {
+  color: #FF00C7;
+}
+
+.burger {
+  z-index: 2;
+  position: fixed;
+  top: 40px;
+  right: 32px;
+  cursor: pointer;
+  mix-blend-mode: difference;
+  visibility: hidden;
+}
+@media (max-width: 1000px) {
+  .burger {
+    visibility: visible;
+  }
+}
+
+.mobile-menu {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 3;
+  width: 100vw;
+  height: 100vh;
+  background: #FFFC00;
+}
+.mobile-menu.visible {
+  visibility: visible;
+}
+.mobile-menu .close {
+  z-index: 2;
+  position: fixed;
+  top: 40px;
+  right: 32px;
+  cursor: pointer;
+}
+.mobile-menu .menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+.mobile-menu .menu-item {
+  color: #000;
+  font-size: 32px;
+  line-height: 57px;
+}
+.mobile-menu .paper {
+  font-size: 32px;
+  line-height: 57px;
+  margin: 50pxs;
+}
+.mobile-menu .mobile-socials {
+  margin-bottom: 50px;
+  display: flex;
+  gap: 40px;
+  mix-blend-mode: difference;
+}
+
+.socials {
+  z-index: 2;
+  position: fixed;
+  top: 40px;
+  right: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  mix-blend-mode: difference;
+}
+@media (max-width: 1000px) {
+  .socials {
+    display: none;
+  }
+}
+
+.main-badge {
+  z-index: 2;
+  position: fixed;
+  bottom: 100px;
+  left: -32px;
+  display: flex;
+  background-color: #FFFC00;
+  color: #000;
+  padding: 2px 21px;
+  border-radius: 20px;
+  transform: rotate(-90deg);
+  font-size: 16px;
+  line-height: 31px;
+  mix-blend-mode: difference;
+}
+@media (max-width: 1000px) {
+  .main-badge {
+    display: none;
+  }
+}
+
+.section-weare, .section-gameapps, .section-roadmap {
+  background-color: #1A1A1A;
+}
+.section-weare {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  padding: 50px;
+}
+@media (max-width: 1000px) {
+  .section-weare {
+    padding: 16px;
+  }
+}
+.section-weare .title {
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  line-height: 34px;
+}
+@media (max-width: 1000px) {
+  .section-weare .title {
+    font-size: 24px;
+  }
+}
+.section-weare .logo {
+  width: 600px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 100px 0 50px;
+}
+@media (max-width: 1000px) {
+  .section-weare .logo {
+    height: 100px;
+    margin: 50px;
+    width: auto;
+  }
+}
+.section-weare .text {
+  font-size: 24px;
+  line-height: 31px;
+  color: #939393;
+  text-align: center;
+  margin-bottom: 45px;
+}
+@media (max-width: 1000px) {
+  .section-weare .text {
+    font-size: 18px;
+  }
+}
+.section-weare .small-text {
+  font-size: 18px;
+  line-height: 26px;
+  color: #939393;
+}
+.section-weare .hidden-info {
+  max-height: 0;
+  overflow: hidden;
+  transition: 1s;
+}
+.section-weare .hidden-info .title {
+  margin-top: 80px;
+}
+.section-weare .hidden-info .title:last-child {
+  margin-bottom: 100px;
+}
+.section-weare .text-block {
+  display: flex;
+  gap: 40px;
+}
+.section-weare .button {
+  display: flex;
+  gap: 10px;
+  color: #FFFC00;
+  font-size: 30px;
+  border: unset;
+  background: unset;
+  cursor: pointer;
+  margin-bottom: 60px;
+}
+.section-weare .button .plus, .section-weare .button .minus {
+  font-size: 36px;
+  line-height: 32px;
+}
+.section-weare .description {
+  color: #939393;
+  margin: 0;
+}
+.section-weare .arrow {
+  color: #FFFC00;
+  font-size: 100px;
+  position: absolute;
+  bottom: -50px;
+  mix-blend-mode: difference;
+}
+.section-nft {
+  background-color: #FFFC00;
+  padding: 80px 0 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+}
+@media (max-width: 1000px) {
+  .section-nft {
+    padding: 16px 0;
+  }
+}
+.section-nft .title {
+  font-size: 52px;
+  line-height: 60px;
+  text-align: center;
+}
+@media (max-width: 1000px) {
+  .section-nft .title {
+    font-size: 32px;
+    line-height: 37px;
+  }
+}
+.section-nft .text {
+  font-size: 24px;
+  line-height: 31px;
+  text-align: center;
+  color: #000;
+}
+@media (max-width: 1000px) {
+  .section-nft .text {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+.section-nft .carousel {
+  display: flex;
+  gap: 40px;
+  margin: 70px 0 40px;
+  -webkit-animation: translateinfinite 40s linear infinite;
+          animation: translateinfinite 40s linear infinite;
+}
+@media (max-width: 1000px) {
+  .section-nft .carousel {
+    gap: 16px;
+    margin: 20px 0;
+  }
+}
+.section-nft .carousel .img {
+  width: 170px;
+  height: 170px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 12px;
+}
+@media (max-width: 1000px) {
+  .section-nft .carousel .img {
+    width: 128px;
+  }
+}
+.section-nft .link {
+  font-size: 30px;
+  line-height: 34px;
+  text-align: center;
+  color: #000;
+  background: #FFF;
+  border-radius: 6px;
+  padding: 10px;
+  text-decoration: unset;
+}
+.section-gameapps {
+  padding: 80px 150px;
+}
+@media (max-width: 1000px) {
+  .section-gameapps {
+    padding: 16px;
+  }
+}
+.section-gameapps .title {
+  color: #FFF;
+  font-size: 52px;
+  line-height: 60px;
+}
+@media (max-width: 1000px) {
+  .section-gameapps .title {
+    font-size: 32px;
+    line-height: 37px;
+  }
+}
+.section-gameapps .game {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  margin-bottom: 130px;
+}
+.section-gameapps .game:nth-child(3) {
+  flex-direction: row-reverse;
+}
+@media (max-width: 1000px) {
+  .section-gameapps .game:nth-child(3) {
+    flex-direction: column-reverse;
+  }
+}
+.section-gameapps .game:last-child {
+  margin-bottom: 0;
+}
+.section-gameapps .game-info {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+.section-gameapps .game-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 30px;
+  line-height: 34px;
+  color: #FFF;
+  margin-bottom: 20px;
+}
+@media (max-width: 1000px) {
+  .section-gameapps .game-name {
+    font-size: 24px;
+    flex-direction: column;
+    align-items: start;
+    margin: 0;
+  }
+}
+.section-gameapps .game-version {
+  color: #939393;
+  font-size: 18px;
+  line-height: 21px;
+}
+.section-gameapps .game-description {
+  color: #939393;
+  font-size: 24px;
+  line-height: 30px;
+}
+@media (max-width: 1000px) {
+  .section-gameapps .game-description {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+.section-gameapps .game-screenshot {
+  width: 275px;
+}
+@media (max-width: 1000px) {
+  .section-gameapps .game-screenshot {
+    width: 275px;
+    height: 275px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+.section-gameapps .game-links {
+  display: flex;
+  gap: 10px;
+}
+.section-gameapps .game-links .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background: #FFFC00;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #000;
+  text-decoration: unset;
+  height: 50px;
+  width: 180px;
+}
+@media (max-width: 1000px) {
+  .section-gameapps .game {
+    flex-direction: column-reverse;
+    margin-bottom: 50px;
+  }
+}
+.section-roadmap {
+  padding: 50px;
+}
+.section-roadmap .title {
+  font-size: 52px;
+  line-height: 60px;
+  color: #FFF;
+}
+.section-roadmap .table {
+  color: #939393;
+  border-collapse: collapse;
+}
+.section-roadmap .table .game-name {
+  color: #FFF;
+}
+.section-roadmap .table td, .section-roadmap .table th {
+  border: 1px solid #939393;
+  padding: 10px 15px;
+}
+.section-roadmap .table tr:first-child th {
+  border-top: 0;
+}
+.section-roadmap .table tr:last-child td {
+  border-bottom: 0;
+}
+.section-roadmap .table tr td:first-child,
+.section-roadmap .table table tr th:first-child {
+  border-left: 0;
+}
+.section-roadmap .table tr td:last-child,
+.section-roadmap .table tr th:last-child {
+  border-right: 0;
+  border-left: 0;
+}
+.section-contacts {
+  background-color: #000;
+}
+@media (max-width: 1000px) {
+  .section-contacts {
+    padding: 10px;
+  }
+}
+.section-contacts .title {
+  font-size: 52px;
+  line-height: 60px;
+  text-align: center;
+  color: #FFF;
+}
+@media (max-width: 1000px) {
+  .section-contacts .title {
+    font-size: 32px;
+    line-height: 37px;
+  }
+}
+.section-contacts .description {
+  font-size: 30px;
+  line-height: 34px;
+  text-align: center;
+  color: #939393;
+  width: 750px;
+  margin: 20px auto 80px;
+}
+@media (max-width: 1000px) {
+  .section-contacts .description {
+    width: unset;
+    font-size: 18px;
+    line-height: 25px;
+    margin: 10px;
+  }
+}
+.section-contacts .heroes {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1000px) {
+  .section-contacts .heroes {
+    flex-wrap: wrap;
+  }
+}
+.section-contacts .heroes .hero .image {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 1000px) {
+  .section-contacts .heroes .hero .image {
+    width: 135px;
+  }
+}
+.section-contacts .heroes .hero .name {
+  color: #FFF;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0;
+}
+.section-contacts .email {
+  color: #FFFC00;
+  font-size: 102px;
+  line-height: 117px;
+  text-align: center;
+}
+@media (max-width: 1000px) {
+  .section-contacts .email {
+    font-size: 32px;
+    line-height: 37px;
+  }
+}
+.section-contacts .rights {
+  font-size: 14px;
+  line-height: 16px;
+  color: #939393;
+  text-align: center;
+}
+
+@-webkit-keyframes translateinfinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1870px);
+  }
+}
+
+@keyframes translateinfinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1870px);
+  }
+}
+.privacy {
+  background-color: #1A1A1A;
+  color: #FFF;
+  height: 100vh;
+}
+.privacy .logo {
+  margin: 32px;
+}
+.privacy .content {
+  max-width: 770px;
+  margin: auto;
+}
+@media (max-width: 1000px) {
+  .privacy .content {
+    margin: 30px;
+  }
+}
+.privacy .heading {
+  font-size: 88px;
+  margin: 0;
+  margin-bottom: 100px;
+}
+@media (max-width: 1000px) {
+  .privacy .heading {
+    font-size: 44px;
+    margin-bottom: 30px;
+  }
+}
+.privacy .title {
+  font-size: 30px;
+}
+@media (max-width: 1000px) {
+  .privacy .title {
+    font-size: 20px;
+  }
+}
+.privacy .text {
+  font-size: 18px;
+  color: #939393;
+}
+@media (max-width: 1000px) {
+  .privacy .text {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=style.css.map */
