@@ -526,7 +526,7 @@ h1, h2, h3, h4 {
   position: sticky;
   left: 0;
   background: #1A1A1A;
-  z-index: 2;
+  z-index: 3;
 }
 .section-roadmap .table .cell {
   position: relative;
@@ -561,6 +561,7 @@ h1, h2, h3, h4 {
   color: #000;
   background-color: #DADADA;
   border-radius: 100px;
+  z-index: 2;
 }
 .section-roadmap .table .data.count-1 {
   width: 300px;
