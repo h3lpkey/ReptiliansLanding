@@ -475,41 +475,116 @@ h1, h2, h3, h4 {
   }
 }
 .section-roadmap {
-  padding: 50px;
+  padding: 100px 0;
 }
 .section-roadmap .title {
   font-size: 52px;
   line-height: 60px;
   color: #FFF;
+  margin: 0;
+  margin-left: 300px;
+}
+@media (max-width: 1000px) {
+  .section-roadmap .title {
+    margin-left: 15px;
+  }
 }
 .section-roadmap .table-wrapper {
   position: relative;
-  height: 300px;
+  height: 500px;
+  margin-top: 80px;
+  margin-left: 300px;
+  overflow-x: scroll;
+}
+@media (max-width: 1000px) {
+  .section-roadmap .table-wrapper {
+    margin-left: 15px;
+  }
 }
 .section-roadmap .table {
+  position: absolute;
   color: #939393;
   border-collapse: collapse;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
-.section-roadmap .table th, .section-roadmap .table td {
-  width: 350px;
-  height: 55px;
-  border: 1px solid red;
+.section-roadmap .table .row {
+  display: flex;
+  border-bottom: 1px solid #3A3A3A;
+  height: 130px;
 }
-.section-roadmap .table .game-name {
+.section-roadmap .table .row-months {
+  height: 80px;
+}
+.section-roadmap .table .row-header {
+  width: 135px;
+  border-right: 1px solid #3A3A3A;
   color: #FFF;
+  display: flex;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  background: #1A1A1A;
+  z-index: 2;
 }
-.section-roadmap .table .game-info {
+.section-roadmap .table .cell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  align-items: center;
+  border-right: 1px dashed #3A3A3A;
+  width: 360px;
+  min-height: 66px;
+}
+.section-roadmap .table .header {
+  display: flex;
+  align-items: center;
+  border-right: 1px dashed #3A3A3A;
+  width: 360px;
+  min-height: 66px;
+}
+.section-roadmap .table .header .month {
+  margin-left: 12px;
+}
+.section-roadmap .table .data {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px 20px;
   display: flex;
   justify-content: center;
-  border-radius: 100px;
+  align-items: center;
+  color: #000;
   background-color: #DADADA;
-  color: #1A1A1A;
-  padding: 5px 15px;
-  margin-bottom: 5px;
+  border-radius: 100px;
 }
-.section-roadmap .table .game-info:last-child {
-  margin-bottom: 0;
+.section-roadmap .table .data.count-1 {
+  width: 300px;
+}
+.section-roadmap .table .data.count-2 {
+  width: 660px;
+}
+.section-roadmap .table .data.count-3 {
+  width: 1020px;
+}
+.section-roadmap .table .data.count-4 {
+  width: 1380px;
+}
+.section-roadmap .table .data.count-5 {
+  width: 1750px;
+}
+.section-roadmap .table .data.count-6 {
+  width: 2100px;
+}
+.section-roadmap .table .data:nth-child(2) {
+  top: 60px;
+}
+.section-roadmap .table .data:nth-child(3) {
+  top: 110px;
 }
 .section-contacts {
   background-color: #000;
