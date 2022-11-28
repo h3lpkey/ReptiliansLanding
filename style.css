@@ -197,11 +197,6 @@ h1, h2, h3, h4 {
     font-size: 18px;
   }
 }
-.section-weare .small-text {
-  font-size: 18px;
-  line-height: 26px;
-  color: #939393;
-}
 .section-weare .hidden-info {
   max-height: 0;
   overflow: hidden;
@@ -213,9 +208,59 @@ h1, h2, h3, h4 {
 .section-weare .hidden-info .title:last-child {
   margin-bottom: 100px;
 }
+@media (max-width: 1000px) {
+  .section-weare .hidden-info .title {
+    margin-top: 20px;
+  }
+}
 .section-weare .text-block {
   display: flex;
+  justify-content: center;
   gap: 40px;
+  max-width: 800px;
+  font-size: 18px;
+  color: #939393;
+}
+@media (max-width: 1000px) {
+  .section-weare .text-block {
+    gap: 10px;
+    flex-direction: column;
+  }
+}
+.section-weare .small-text {
+  font-size: 18px;
+}
+.section-weare .normal-text {
+  font-size: 22px;
+}
+.section-weare .w50 {
+  width: 50%;
+}
+@media (max-width: 1000px) {
+  .section-weare .w50 {
+    width: 100%;
+  }
+}
+.section-weare .text-center {
+  text-align: center;
+}
+.section-weare .borders {
+  display: flex;
+  margin: auto;
+}
+@media (max-width: 1000px) {
+  .section-weare .borders {
+    display: none;
+  }
+}
+.section-weare .last-title {
+  text-align: center;
+  margin: 20px 0 100px 0px;
+}
+@media (max-width: 1000px) {
+  .section-weare .last-title {
+    margin: 20px 0 40px 0px;
+  }
 }
 .section-weare .button {
   display: flex;
@@ -242,6 +287,12 @@ h1, h2, h3, h4 {
   bottom: -50px;
   mix-blend-mode: difference;
 }
+@media (max-width: 1000px) {
+  .section-weare .arrow {
+    font-size: 40px;
+    bottom: -22px;
+  }
+}
 .section-nft {
   background-color: #FFFC00;
   padding: 80px 0 170px;
@@ -253,7 +304,7 @@ h1, h2, h3, h4 {
 }
 @media (max-width: 1000px) {
   .section-nft {
-    padding: 16px 0;
+    padding: 32px 0;
   }
 }
 .section-nft .title {
@@ -393,7 +444,7 @@ h1, h2, h3, h4 {
 }
 @media (max-width: 1000px) {
   .section-gameapps .game-screenshot {
-    width: 275px;
+    width: 100%;
     height: 275px;
     -o-object-fit: cover;
        object-fit: cover;
@@ -431,31 +482,34 @@ h1, h2, h3, h4 {
   line-height: 60px;
   color: #FFF;
 }
+.section-roadmap .table-wrapper {
+  position: relative;
+  height: 300px;
+}
 .section-roadmap .table {
   color: #939393;
   border-collapse: collapse;
+  width: 100%;
+}
+.section-roadmap .table th, .section-roadmap .table td {
+  width: 350px;
+  height: 55px;
+  border: 1px solid red;
 }
 .section-roadmap .table .game-name {
   color: #FFF;
 }
-.section-roadmap .table td, .section-roadmap .table th {
-  border: 1px solid #939393;
-  padding: 10px 15px;
+.section-roadmap .table .game-info {
+  display: flex;
+  justify-content: center;
+  border-radius: 100px;
+  background-color: #DADADA;
+  color: #1A1A1A;
+  padding: 5px 15px;
+  margin-bottom: 5px;
 }
-.section-roadmap .table tr:first-child th {
-  border-top: 0;
-}
-.section-roadmap .table tr:last-child td {
-  border-bottom: 0;
-}
-.section-roadmap .table tr td:first-child,
-.section-roadmap .table table tr th:first-child {
-  border-left: 0;
-}
-.section-roadmap .table tr td:last-child,
-.section-roadmap .table tr th:last-child {
-  border-right: 0;
-  border-left: 0;
+.section-roadmap .table .game-info:last-child {
+  margin-bottom: 0;
 }
 .section-contacts {
   background-color: #000;

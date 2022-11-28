@@ -25,29 +25,29 @@ const mobileMenuHandler = () => {
 }
 
 const scrollHandler = () => {
-  let menu = document.querySelector('.menu');
+  const menu = document.querySelector('.menu');
 
-  let menuWeare = document.getElementById('weare');
-  let menuNft = document.getElementById('nft');
-  let menuGameApps = document.getElementById('gameapps');
-  let menuRoadmap = document.getElementById('roadmap');
-  let menuContacts = document.getElementById('contacts');
+  const menuWeare = document.getElementById('weare');
+  const menuNft = document.getElementById('nft');
+  const menuGameApps = document.getElementById('gameapps');
+  const menuRoadmap = document.getElementById('roadmap');
+  const menuContacts = document.getElementById('contacts');
 
-  let posMenu = window.pageYOffset + menu.offsetHeight;
+  const posMenu = window.pageYOffset + menu.offsetHeight;
 
-  let posMenuWeare = menuWeare.offsetTop + menuWeare.offsetHeight;
-  let posMenuNft = menuNft.offsetTop + menuNft.offsetHeight;
-  let posMenuGameApps = menuGameApps.offsetTop + menuGameApps.offsetHeight;
-  let posMenuRoadmap = menuRoadmap.offsetTop + menuRoadmap.offsetHeight;
-  let posMenuContacts = menuContacts.offsetTop + menuContacts.offsetHeight;
+  const posMenuWeare = menuWeare.offsetTop + menuWeare.offsetHeight;
+  const posMenuNft = menuNft.offsetTop + menuNft.offsetHeight;
+  const posMenuGameApps = menuGameApps.offsetTop + menuGameApps.offsetHeight;
+  const posMenuRoadmap = menuRoadmap.offsetTop + menuRoadmap.offsetHeight;
+  const posMenuContacts = menuContacts.offsetTop + menuContacts.offsetHeight;
 
-  let distancePosMenuWeare = posMenuWeare - posMenu;
-  let distancePosMenuNft = posMenuNft - posMenu;
-  let distancePosMenuGameApps = posMenuGameApps - posMenu;
-  let distancePosMenuRoadmap = posMenuRoadmap - posMenu;
-  let distancePosMenuContacts = posMenuContacts - posMenu;
+  const distancePosMenuWeare = posMenuWeare - posMenu;
+  const distancePosMenuNft = posMenuNft - posMenu;
+  const distancePosMenuGameApps = posMenuGameApps - posMenu;
+  const distancePosMenuRoadmap = posMenuRoadmap - posMenu;
+  const distancePosMenuContacts = posMenuContacts - posMenu;
 
-  let min = Math.min(...[distancePosMenuWeare, distancePosMenuNft, distancePosMenuGameApps, distancePosMenuRoadmap, distancePosMenuContacts].filter(num => num > 0));
+  const min = Math.min(...[distancePosMenuWeare, distancePosMenuNft, distancePosMenuGameApps, distancePosMenuRoadmap, distancePosMenuContacts].filter(num => num > 0));
 
   document.querySelectorAll('.menu-item')[0].classList.remove('active');
   document.querySelectorAll('.menu-item')[1].classList.remove('active');
@@ -62,7 +62,14 @@ const scrollHandler = () => {
   if (min === distancePosMenuContacts) document.querySelectorAll('.menu-item')[4].classList.add('active');
 }
 
+let tableData = [
+  { name: "Reptilian", height: 1658, place: "Parco Foreste Casentinesi" },
+  { name: "CatFall", height: 1654, place: "Parco Foreste Casentinesi" },
+  { name: "MindHealth", height: 1520, place: "Parco Foreste Casentinesi" },
+];
 
 document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', scrollHandler);
+
+
 });
