@@ -6,16 +6,22 @@ const roadMapData = [
         task: "Fixes feedback issues",
         long: 1,
         startMonth: 1,
+        backgroundColor: "blue",
+        textColor: "red"
       },
       {
         task: "Any task",
         long: 1, startMonth: 2,
         startMonth: 2,
+        backgroundColor: "#DADADA",
+        textColor: "#000"
       },
       {
         task: "Launch in stores and publishing on forums",
         long: 1,
         startMonth: 2,
+        backgroundColor: "#dada",
+        textColor: "#0e0"
       }
     ]
   },
@@ -26,6 +32,8 @@ const roadMapData = [
         task: "Design",
         long: 3,
         startMonth: 1,
+        backgroundColor: "#DADADA",
+        textColor: "#000"
       }
     ]
   },
@@ -36,16 +44,22 @@ const roadMapData = [
         task: "Interview and polls. Collect data.",
         long: 1,
         startMonth: 1,
+        backgroundColor: "#DADADA",
+        textColor: "#000"
       },
       {
         task: "Design",
         long: 2,
         startMonth: 1,
+        backgroundColor: "#DADADA",
+        textColor: "#000"
       },
       {
         task: "Develop 1st build",
         long: 1,
         startMonth: 2,
+        backgroundColor: "#DADADA",
+        textColor: "#000"
       },
     ]
   }
@@ -120,7 +134,13 @@ const scrollHandler = () => {
 document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', scrollHandler);
   const roadmap = document.getElementById('roadmap-table');
+  const roadmapWrapper = document.getElementById('roadmap-wrapper');
   const currentDate = new Date();
+
+  roadmapWrapper.addEventListener("wheel", (evt) => {
+    evt.preventDefault();
+    roadmapWrapper.scrollLeft += evt.deltaY;
+  });
 
   const headerWithMonths = `
     <div class="row row-months">
@@ -137,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const tasksFilter = game.data.filter(task => {
         return task.startMonth === index + 1
       })
-      const tasks = `${tasksFilter.map(task => { return `<span class="data count-${task.long}">${task.task}</span>` })}`
+      const tasks = `${tasksFilter.map(task => { return `<span style="background-color: ${task.backgroundColor}; color: ${task.textColor}" class="data count-${task.long}">${task.task}</span>` })}`
 
       cells = cells + `<div class="cell">${tasks}</div>`;
     });
@@ -152,4 +172,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
   }));
   roadmap.innerHTML = tableNODE;
+
+  var flkty = new Flickity('.carousel', {
+    autoPlay: 1000,
+    wrapAround: true,
+    cellAlign: 'left',
+    prevNextButtons: false,
+    pageDots: false
+
+  });
 });

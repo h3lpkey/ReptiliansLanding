@@ -137,6 +137,7 @@ h1, h2, h3, h4 {
   font-size: 16px;
   line-height: 31px;
   mix-blend-mode: difference;
+  text-decoration: none;
 }
 @media (max-width: 1000px) {
   .main-badge {
@@ -191,6 +192,7 @@ h1, h2, h3, h4 {
   color: #939393;
   text-align: center;
   margin-bottom: 45px;
+  max-width: 930px;
 }
 @media (max-width: 1000px) {
   .section-weare .text {
@@ -323,6 +325,7 @@ h1, h2, h3, h4 {
   line-height: 31px;
   text-align: center;
   color: #000;
+  max-width: 930px;
 }
 @media (max-width: 1000px) {
   .section-nft .text {
@@ -331,11 +334,9 @@ h1, h2, h3, h4 {
   }
 }
 .section-nft .carousel {
-  display: flex;
-  gap: 40px;
+  z-index: 2;
   margin: 70px 0 40px;
-  -webkit-animation: translateinfinite 40s linear infinite;
-          animation: translateinfinite 40s linear infinite;
+  width: 100%;
 }
 @media (max-width: 1000px) {
   .section-nft .carousel {
@@ -353,6 +354,7 @@ h1, h2, h3, h4 {
 @media (max-width: 1000px) {
   .section-nft .carousel .img {
     width: 128px;
+    height: 128px;
   }
 }
 .section-nft .link {
@@ -377,6 +379,9 @@ h1, h2, h3, h4 {
   color: #FFF;
   font-size: 52px;
   line-height: 60px;
+  max-width: 1300px;
+  margin: auto;
+  margin-bottom: 100px;
 }
 @media (max-width: 1000px) {
   .section-gameapps .title {
@@ -388,7 +393,9 @@ h1, h2, h3, h4 {
   display: flex;
   gap: 40px;
   justify-content: space-between;
+  margin: auto;
   margin-bottom: 130px;
+  max-width: 1300px;
 }
 .section-gameapps .game:nth-child(3) {
   flex-direction: row-reverse;
@@ -405,6 +412,10 @@ h1, h2, h3, h4 {
   display: flex;
   flex-direction: column;
   max-width: 500px;
+  position: -webkit-sticky;
+  position: sticky;
+  align-self: flex-start;
+  top: 0;
 }
 .section-gameapps .game-name {
   display: flex;
@@ -475,30 +486,40 @@ h1, h2, h3, h4 {
   }
 }
 .section-roadmap {
-  padding: 100px 0;
+  padding: 80px 150px;
+  overflow: hidden;
+}
+@media (max-width: 1000px) {
+  .section-roadmap {
+    padding: 16px;
+  }
+}
+.section-roadmap .wrapper {
+  max-width: 1300px;
+  margin: auto;
 }
 .section-roadmap .title {
   font-size: 52px;
   line-height: 60px;
   color: #FFF;
   margin: 0;
-  margin-left: 300px;
-}
-@media (max-width: 1000px) {
-  .section-roadmap .title {
-    margin-left: 15px;
-  }
 }
 .section-roadmap .table-wrapper {
   position: relative;
   height: 500px;
   margin-top: 80px;
-  margin-left: 300px;
   overflow-x: scroll;
+  width: 1200px;
+}
+@media (min-width: 2000px) {
+  .section-roadmap .table-wrapper {
+    width: 2100px;
+  }
 }
 @media (max-width: 1000px) {
   .section-roadmap .table-wrapper {
     margin-left: 15px;
+    width: 100%;
   }
 }
 .section-roadmap .table {
@@ -663,6 +684,16 @@ h1, h2, h3, h4 {
     line-height: 37px;
   }
 }
+.section-contacts .links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.section-contacts .links .link {
+  font-size: 14px;
+  line-height: 16px;
+  color: #939393;
+}
 .section-contacts .rights {
   font-size: 14px;
   line-height: 16px;
@@ -670,23 +701,6 @@ h1, h2, h3, h4 {
   text-align: center;
 }
 
-@-webkit-keyframes translateinfinite {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-1870px);
-  }
-}
-
-@keyframes translateinfinite {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-1870px);
-  }
-}
 .privacy {
   background-color: #1A1A1A;
   color: #FFF;
@@ -731,4 +745,8 @@ h1, h2, h3, h4 {
   .privacy .text {
     font-size: 14px;
   }
+}
+
+.carousel-cell {
+  margin-right: 10px;
 }/*# sourceMappingURL=style.css.map */

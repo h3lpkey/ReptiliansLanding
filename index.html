@@ -12,10 +12,15 @@
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
     <script src="main.js"></script>
+    <script src="https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js"></script>
     <meta name="msapplication-TileColor" content="#000000" />
     <meta name="theme-color" content="#ffffff" />
     <title>Reptilians</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2.3.0/dist/flickity.css"
+    />
   </head>
   <body class="body">
     <nav class="menu">
@@ -52,7 +57,7 @@
         <a href="#instagram"><img src="assets/instagram.svg" alt="nft" /></a>
       </div>
     </div>
-    <span class="main-badge">Reptilian Paper</span>
+    <a class="main-badge" href="/reptilians_paper.html">Reptilian Paper</a>
     <div class="socials">
       <a href="#telegram"><img src="assets/telegram.svg" alt="nft" /></a>
       <a href="#discord"><img src="assets/discord.svg" alt="nft" /></a>
@@ -65,9 +70,9 @@
       </h1>
       <img src="assets/logo.png" alt="logo" class="logo" />
       <p class="text">
-        A small team of passionate people, who do what they want to doin a way
-        they most liked. And we decided to make interesting games, create useful
-        apps and build a community of interested people.
+        A small team of passionate people, who do what they want to do <br />
+        in a way they most liked. And we decided to make interesting games,
+        create useful apps and build a community of interested people.
       </p>
       <div class="hidden-info" id="hidden-info">
         <h2 class="title">Here it is</h2>
@@ -119,34 +124,80 @@
       <h2 class="title">NFT collection for the true reptilians</h2>
       <p class="text">
         We created 15000 generated Reptilians for our first project called
-        Invader. And we will mint 15000 for every new project. All of these NFTs
-        are unique and there is no repeating.
+        Invader.<br />
+        And we will mint 15000 for every new project.<br />
+        All of these NFTs are unique and there is no repeating.
       </p>
       <div class="carousel" id="nfts">
-        <img class="img" src="assets/NFT00001.jpg" alt="nft" />
-        <img class="img" src="assets/NFT00002.jpg" alt="nft" />
-        <img class="img" src="assets/NFT00003.jpg" alt="nft" />
-        <img class="img" src="assets/NFT00004.jpg" alt="nft" />
-        <img class="img" src="assets/NFT00005.jpg" alt="nft" />
-        <img class="img" src="assets/NFT00006.jpg" alt="nft" />
-        <img class="img" src="assets/NFT00007.jpg" alt="nft" />
-        <img class="img" src="assets/NFT00008.jpg" alt="nft" />
-        <img class="img" src="assets/NFT00009.jpg" alt="nft" />
-        <img class="img" src="assets/NFT00010.jpg" alt="nft" />
-        <img class="img" src="assets/NFT00011.jpg" alt="nft" />
-        <img class="img" src="assets/NFT00012.jpg" alt="nft" />
-        <img class="img" src="assets/NFT00013.jpg" alt="nft" />
-        <img class="img" src="assets/NFT00014.jpg" alt="nft" />
-        <img class="img" src="assets/NFT00015.jpg" alt="nft" />
-        <img class="img" src="assets/NFT00016.jpg" alt="nft" />
-        <img class="img" src="assets/NFT00017.jpg" alt="nft" />
-        <img class="img" src="assets/NFT00018.jpg" alt="nft" />
-        <img class="img" src="assets/NFT00019.jpg" alt="nft" />
-        <img class="img" src="assets/NFT00020.jpg" alt="nft" />
-        <img class="img" src="assets/NFT00021.jpg" alt="nft" />
-        <img class="img" src="assets/NFT00022.jpg" alt="nft" />
-        <img class="img" src="assets/NFT00023.jpg" alt="nft" />
-        <img class="img" src="assets/NFT00005.jpg" alt="nft" />
+        <div class="carousel-cell">
+          <img class="img" src="assets/NFT00001.jpg" alt="nft" />
+        </div>
+        <div class="carousel-cell">
+          <img class="img" src="assets/NFT00002.jpg" alt="nft" />
+        </div>
+        <div class="carousel-cell">
+          <img class="img" src="assets/NFT00003.jpg" alt="nft" />
+        </div>
+        <div class="carousel-cell">
+          <img class="img" src="assets/NFT00004.jpg" alt="nft" />
+        </div>
+        <div class="carousel-cell">
+          <img class="img" src="assets/NFT00005.jpg" alt="nft" />
+        </div>
+        <div class="carousel-cell">
+          <img class="img" src="assets/NFT00006.jpg" alt="nft" />
+        </div>
+        <div class="carousel-cell">
+          <img class="img" src="assets/NFT00007.jpg" alt="nft" />
+        </div>
+        <div class="carousel-cell">
+          <img class="img" src="assets/NFT00008.jpg" alt="nft" />
+        </div>
+        <div class="carousel-cell">
+          <img class="img" src="assets/NFT00009.jpg" alt="nft" />
+        </div>
+        <div class="carousel-cell">
+          <img class="img" src="assets/NFT00010.jpg" alt="nft" />
+        </div>
+        <div class="carousel-cell">
+          <img class="img" src="assets/NFT00011.jpg" alt="nft" />
+        </div>
+        <div class="carousel-cell">
+          <img class="img" src="assets/NFT00012.jpg" alt="nft" />
+        </div>
+        <div class="carousel-cell">
+          <img class="img" src="assets/NFT00013.jpg" alt="nft" />
+        </div>
+        <div class="carousel-cell">
+          <img class="img" src="assets/NFT00014.jpg" alt="nft" />
+        </div>
+        <div class="carousel-cell">
+          <img class="img" src="assets/NFT00015.jpg" alt="nft" />
+        </div>
+        <div class="carousel-cell">
+          <img class="img" src="assets/NFT00016.jpg" alt="nft" />
+        </div>
+        <div class="carousel-cell">
+          <img class="img" src="assets/NFT00017.jpg" alt="nft" />
+        </div>
+        <div class="carousel-cell">
+          <img class="img" src="assets/NFT00018.jpg" alt="nft" />
+        </div>
+        <div class="carousel-cell">
+          <img class="img" src="assets/NFT00019.jpg" alt="nft" />
+        </div>
+        <div class="carousel-cell">
+          <img class="img" src="assets/NFT00020.jpg" alt="nft" />
+        </div>
+        <div class="carousel-cell">
+          <img class="img" src="assets/NFT00021.jpg" alt="nft" />
+        </div>
+        <div class="carousel-cell">
+          <img class="img" src="assets/NFT00022.jpg" alt="nft" />
+        </div>
+        <div class="carousel-cell">
+          <img class="img" src="assets/NFT00023.jpg" alt="nft" />
+        </div>
       </div>
       <a href="#" class="link">Come and get some</a>
     </section>
@@ -197,9 +248,11 @@
       </div>
     </section>
     <section class="section section-roadmap" id="roadmap">
-      <h2 class="title">Roadmaps</h2>
-      <div class="table-wrapper">
-        <div class="table" id="roadmap-table"></div>
+      <div class="wrapper">
+        <h2 class="title">Roadmaps</h2>
+        <div class="table-wrapper" id="roadmap-wrapper">
+          <div class="table" id="roadmap-table"></div>
+        </div>
       </div>
     </section>
     <section class="section section-contacts" id="contacts">
@@ -227,6 +280,10 @@
         </div>
       </div>
       <p class="email">hey@reptilians.band</p>
+      <div class="links">
+        <a class="link" href="/terms_of_service.html">Terms of Service</a>
+        <a class="link" href="/reptilians_paper.html">Privacy Policy</a>
+      </div>
       <p class="rights">© 2022, all rights reserved</p>
     </section>
   </body>
