@@ -456,8 +456,19 @@ h1, h2, h3, h4 {
     line-height: 25px;
   }
 }
+.section-gameapps .game-screenshot-wrapper {
+  position: relative;
+}
+@media (max-width: 1000px) {
+  .section-gameapps .game-screenshot-wrapper {
+    background-image: unset;
+    width: 100%;
+    padding: 0;
+  }
+}
 .section-gameapps .game-screenshot {
-  width: 275px;
+  width: 255px;
+  height: 500px;
 }
 @media (max-width: 1000px) {
   .section-gameapps .game-screenshot {
@@ -465,6 +476,18 @@ h1, h2, h3, h4 {
     height: 275px;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+}
+.section-gameapps .game-border {
+  width: 285px;
+  position: absolute;
+  top: -15px;
+  left: -16px;
+  height: 535px;
+}
+@media (max-width: 1000px) {
+  .section-gameapps .game-border {
+    display: none;
   }
 }
 .section-gameapps .game-links {
@@ -538,10 +561,13 @@ h1, h2, h3, h4 {
 .section-roadmap .table .row {
   display: flex;
   border-bottom: 1px solid #3A3A3A;
-  height: 130px;
 }
 .section-roadmap .table .row-months {
   height: 80px;
+}
+.section-roadmap .table .task-wrapper {
+  height: 66px;
+  position: relative;
 }
 .section-roadmap .table .row-header {
   padding-top: 20px;
@@ -561,7 +587,6 @@ h1, h2, h3, h4 {
   display: flex;
   flex-direction: column;
   gap: 1px;
-  align-items: center;
   border-right: 1px dashed #3A3A3A;
   width: 360px;
   min-height: 66px;
@@ -678,6 +703,7 @@ h1, h2, h3, h4 {
   font-size: 24px;
   line-height: 28px;
   margin: 0;
+  text-align: center;
 }
 .section-contacts .email {
   color: #FFFC00;
@@ -706,6 +732,7 @@ h1, h2, h3, h4 {
   line-height: 16px;
   color: #939393;
   text-align: center;
+  padding-bottom: 50px;
 }
 
 .privacy {

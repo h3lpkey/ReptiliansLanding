@@ -17,12 +17,13 @@ const roadMapData = [
         textColor: "#000"
       },
       {
-        task: "Launch in stores and publishing on forums",
-        long: 1,
+        task: "Any task",
+        long: 1, startMonth: 2,
         startMonth: 2,
-        backgroundColor: "#dada",
-        textColor: "#0e0"
-      }
+        backgroundColor: "#DADADA",
+        textColor: "#000"
+      },
+
     ]
   },
   {
@@ -157,9 +158,8 @@ document.addEventListener('DOMContentLoaded', function () {
       const tasksFilter = game.data.filter(task => {
         return task.startMonth === index + 1
       })
-      const tasks = `${tasksFilter.map(task => { return `<span style="background-color: ${task.backgroundColor}; color: ${task.textColor}" class="data count-${task.long}">${task.task}</span>` })}`
-
-      cells = cells + `<div class="cell">${tasks}</div>`;
+      const tasks = `${tasksFilter.map(task => { return `<span class="task-wrapper"><span style="background-color: ${task.backgroundColor}; color: ${task.textColor}" class="data count-${task.long}">${task.task}</span></span>` }).join('')}`
+      cells = cells + `<div class="cell">${tasks}</div > `;
     });
 
     const row = `
