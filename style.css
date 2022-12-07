@@ -5,6 +5,7 @@
 html {
   background: #000;
   scroll-behavior: smooth;
+  height: 100vh;
 }
 
 .body {
@@ -313,6 +314,7 @@ h1, h2, h3, h4 {
   font-size: 52px;
   line-height: 60px;
   text-align: center;
+  margin-bottom: 16px;
 }
 @media (max-width: 1000px) {
   .section-nft .title {
@@ -321,6 +323,7 @@ h1, h2, h3, h4 {
   }
 }
 .section-nft .text {
+  margin: 0;
   font-size: 24px;
   line-height: 31px;
   text-align: center;
@@ -379,9 +382,9 @@ h1, h2, h3, h4 {
   color: #FFF;
   font-size: 52px;
   line-height: 60px;
-  max-width: 1300px;
+  max-width: 936px;
   margin: auto;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 @media (max-width: 1000px) {
   .section-gameapps .title {
@@ -395,7 +398,7 @@ h1, h2, h3, h4 {
   justify-content: space-between;
   margin: auto;
   margin-bottom: 130px;
-  max-width: 1300px;
+  max-width: 936px;
 }
 .section-gameapps .game:nth-child(3) {
   flex-direction: row-reverse;
@@ -424,7 +427,8 @@ h1, h2, h3, h4 {
   font-size: 30px;
   line-height: 34px;
   color: #FFF;
-  margin-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 16px;
 }
 @media (max-width: 1000px) {
   .section-gameapps .game-name {
@@ -440,6 +444,8 @@ h1, h2, h3, h4 {
   line-height: 21px;
 }
 .section-gameapps .game-description {
+  margin-top: 0;
+  margin-bottom: 40px;
   color: #939393;
   font-size: 24px;
   line-height: 30px;
@@ -495,7 +501,7 @@ h1, h2, h3, h4 {
   }
 }
 .section-roadmap .wrapper {
-  max-width: 1300px;
+  max-width: 936px;
   margin: auto;
 }
 .section-roadmap .title {
@@ -511,7 +517,7 @@ h1, h2, h3, h4 {
   overflow-x: scroll;
   width: 1200px;
 }
-@media (min-width: 2000px) {
+@media (min-width: 1500px) {
   .section-roadmap .table-wrapper {
     width: 2100px;
   }
@@ -538,11 +544,12 @@ h1, h2, h3, h4 {
   height: 80px;
 }
 .section-roadmap .table .row-header {
+  padding-top: 20px;
   width: 135px;
   border-right: 1px solid #3A3A3A;
   color: #FFF;
   display: flex;
-  align-items: center;
+  justify-content: center;
   position: -webkit-sticky;
   position: sticky;
   left: 0;
@@ -704,7 +711,7 @@ h1, h2, h3, h4 {
 .privacy {
   background-color: #1A1A1A;
   color: #FFF;
-  height: 100vh;
+  height: 100%;
 }
 .privacy .logo {
   margin: 32px;

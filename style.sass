@@ -14,6 +14,7 @@ $media-width: 1000px
 html
   background: $color-black
   scroll-behavior: smooth
+  height: 100vh
 .body
   position: relative
 h1,h2,h3,h4
@@ -237,10 +238,12 @@ h1,h2,h3,h4
       font-size: 52px
       line-height: 60px
       text-align: center
+      margin-bottom: 16px
       @media(max-width: $media-width)
         font-size: 32px
         line-height: 37px
     .text
+      margin: 0
       font-size: 24px
       line-height: 31px
       text-align: center
@@ -253,13 +256,8 @@ h1,h2,h3,h4
       z-index: 2
       margin: 70px 0 40px
       width: 100%
-      // align-self: baseline
-      // width: 1110px
-      // animation: carouselAnimationDesktop 4s linear infinite
       @media(max-width: $media-width)
-        // animation: carouselAnimationMobile 4s linear infinite
         gap: 16px
-        // width: calc(170px * 23)
         margin: 20px 0
       .img
         width: 170px
@@ -286,9 +284,9 @@ h1,h2,h3,h4
       color: $color-white
       font-size: 52px
       line-height: 60px
-      max-width: 1300px
+      max-width: 936px
       margin: auto
-      margin-bottom: 100px
+      margin-bottom: 80px
       @media(max-width: $media-width)
         font-size: 32px
         line-height: 37px
@@ -298,7 +296,7 @@ h1,h2,h3,h4
       justify-content: space-between
       margin: auto
       margin-bottom: 130px
-      max-width: 1300px
+      max-width: 936px
       &:nth-child(3)
         flex-direction: row-reverse
         @media(max-width: $media-width)
@@ -319,7 +317,8 @@ h1,h2,h3,h4
         font-size: 30px
         line-height: 34px
         color: $color-white
-        margin-bottom: 20px
+        margin-top: 0
+        margin-bottom: 16px
         @media(max-width: $media-width)
           font-size: 24px
           flex-direction: column
@@ -330,6 +329,8 @@ h1,h2,h3,h4
         font-size: 18px
         line-height: 21px
       &-description
+        margin-top: 0
+        margin-bottom: 40px
         color: $color-grey
         font-size: 24px
         line-height: 30px
@@ -367,7 +368,7 @@ h1,h2,h3,h4
     @media(max-width: $media-width)
       padding: 16px
     .wrapper
-      max-width: 1300px
+      max-width: 936px
       margin: auto
     .title
       font-size: 52px
@@ -380,7 +381,7 @@ h1,h2,h3,h4
       margin-top: 80px
       overflow-x: scroll
       width: 1200px
-      @media(min-width: 2000px)
+      @media(min-width: 1500px)
         width: 2100px
       @media(max-width: $media-width)
         margin-left: 15px
@@ -398,11 +399,12 @@ h1,h2,h3,h4
         &-months
           height: 80px
       .row-header
+        padding-top: 20px
         width: 135px
         border-right: 1px solid $color-grey-lighter
         color: $color-white
         display: flex
-        align-items: center
+        justify-content: center
         position: sticky
         left: 0
         background: $color-grey-dark
@@ -523,7 +525,7 @@ h1,h2,h3,h4
 .privacy
   background-color: $color-grey-dark
   color: $color-white
-  height: 100vh
+  height: 100%
   .logo
     margin: 32px
   .content
