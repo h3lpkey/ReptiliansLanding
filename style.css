@@ -728,7 +728,7 @@ h1, h2, h3, h4 {
 .privacy .heading {
   font-size: 88px;
   margin: 0;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
 }
 @media (max-width: 1000px) {
   .privacy .heading {
